@@ -26,12 +26,13 @@ function subm() {
     .then((data) =>  {
         console.log("Sucesso:", data); 
         alert("Dados enviados (hehe).");
+        document.getElementById("vendaForm").reset();
     })
     .catch((error) => {
         console.error("Errinho: ", error);
         alert("Teve um erro (not hehe).");
+        document.getElementById("vendaForm").reset();
     });
-    document.getElementById("vendaForm").reset();
     document.getElementById("popup").style.display = 'none';
 }
 
